@@ -62,6 +62,10 @@ export default class Picker extends EventEmitter {
     });
 
     addEvent(this.confirmEl, 'click', () => {
+      if (this.scrolling) {
+        return;
+      }
+
       this.hide();
 
       let changed = false;
@@ -99,11 +103,16 @@ export default class Picker extends EventEmitter {
     });
     ((index) => {
       this.wheels[index].on('scrollEnd', () => {
+        this.scrolling = false;
         let currentIndex = this.wheels[index].getSelectedIndex();
         if (this.selectedIndex[i] !== currentIndex) {
           this.selectedIndex[i] = currentIndex;
           this.trigger('picker.change', index, currentIndex);
         }
+      });
+
+      this.wheels[index].on('scrollStart', () => {
+        this.scrolling = true;
       });
     })(i);
     return this.wheels[i];
