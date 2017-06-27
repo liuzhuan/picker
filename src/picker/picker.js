@@ -104,6 +104,8 @@ export default class Picker extends EventEmitter {
     ((index) => {
       this.wheels[index].on('scrollEnd', () => {
         this.scrolling = false;
+        removeClass(this.confirmEl, 'disabled');
+
         let currentIndex = this.wheels[index].getSelectedIndex();
         if (this.selectedIndex[i] !== currentIndex) {
           this.selectedIndex[i] = currentIndex;
@@ -113,6 +115,7 @@ export default class Picker extends EventEmitter {
 
       this.wheels[index].on('scrollStart', () => {
         this.scrolling = true;
+        addClass(this.confirmEl, 'disabled');
       });
     })(i);
     return this.wheels[i];
