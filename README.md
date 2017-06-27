@@ -1,3 +1,5 @@
+本库 fork 自 [ustbhuangyi/picker](https://github.com/ustbhuangyi/picker)。增加了一些条件判断，picker 滚动时让确定按钮无法选择，便于在联动列表中使用。
+
 # picker
 [![npm](https://img.shields.io/npm/v/better-picker.svg?style=flat-square)](https://www.npmjs.com/package/better-picker)
 
@@ -20,18 +22,18 @@
 安装better-picker
 
 ```shell
-npm install better-picker --save-dev
+npm install liuz-better-picker --save-dev
 ```
-引入better-picker
+引入 liuz-better-picker
 
 ```javascript
-import Picker from 'better-picker'
+import Picker from 'liuz-better-picker'
 ```
 
 >如果不支持import, 请使用
 
 ```javascript
-var Picker = require('better-picker')
+var Picker = require('liuz-better-picker')
 ```
 
 
@@ -42,7 +44,7 @@ html 部分：
 JS 部分：
 
     var nameEl = document.getElementById('name');
-    
+
     var data1 = [
     	{
     		text: '小美',
@@ -52,7 +54,7 @@ JS 部分：
     		value: 2
     	}
     ];
-    
+
     var data2 = [
     	{
     		text: '张三',
@@ -103,7 +105,7 @@ JS 部分：
     		value: 12
     	}
     ];
-    
+
     var data3 = [
     	{
     		text: '开心',
@@ -120,32 +122,32 @@ JS 部分：
     		value: 4
     	}
     ];
-    
+
     var picker = new Picker({
     	data: [data1, data2, data3],
     	selectedIndex: [0, 1, 2],
     	title: '我们都是小学生'
     });
-    
+
     picker.on('picker.select', function (selectedVal, selectedIndex) {
     	nameEl.innerText = data1[selectedIndex[0]].text + ' ' + data2[selectedIndex[1]].text + ' ' + data3[selectedIndex[2]].text;
     })
-    
+
     picker.on('picker.change', function (index, selectedIndex) {
     	console.log(index);
     	console.log(selectedIndex);
     });
-    
+
     picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
     	console.log(selectedVal);
     	console.log(selectedIndex);
     });
-    
+
     nameEl.addEventListener('click', function () {
     	picker.show();
     });
 
-   
+
 
 ### options
 options.title  (String)
@@ -203,7 +205,7 @@ picker的源码是基于webpack构建的
 
 首先，clone项目源码
 ```bash
-git clone https://github.com/ustbhuangyi/picker.git
+git clone https://github.com/liuzhuan/picker.git
 ```
 
 安装依赖

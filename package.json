@@ -1,6 +1,6 @@
 {
-  "name": "better-picker",
-  "version": "1.1.3",
+  "name": "liuz-better-picker",
+  "version": "1.0.0",
   "description": "h5 picker inspired by ios UIPickerView",
   "main": "dist/picker.min.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ustbhuangyi/picker.git"
+    "url": "https://github.com/liuzhuan/picker"
   },
   "keywords": [
     "h5",
@@ -20,13 +20,13 @@
   "author": "ustbhuangyi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ustbhuangyi/picker/issues"
+    "url": "https://github.com/liuzhuan/picker/issues"
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
     "better-scroll": "^0.1.15"
   },
-  "homepage": "https://github.com/ustbhuangyi/picker",
+  "homepage": "https://github.com/liuzhuan/picker",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.1.2",
