@@ -87,10 +87,10 @@
         overflow: hidden
         font-size: 21px
         .wheel-scroll
-          margin-top: 68px
-          line-height: 36px
+          line-height: 73px
+          margin-top: ((@height - @line-height) / 2);
           .wheel-item
-            height: 36px
+            height: @line-height;
             overflow: hidden
             white-space: nowrap
             color: #333

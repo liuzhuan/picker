@@ -1,6 +1,6 @@
 {
   "name": "liuz-better-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "h5 picker inspired by ios UIPickerView",
   "main": "dist/picker.min.js",
   "scripts": {
